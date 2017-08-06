@@ -1,0 +1,120 @@
+octave:15> aula1
+
+dados
+-----
+data1.octave  X (97x1) y (97x1)  grad descent univariavel
+data2.octave  X (47x2) y (47x1)  grad descent multivariável
+
+data1.X.python X (97x1)  grad descent univariavel
+data2.X.python X (47x2)  grad descent multivariável
+data1.y.python y (97x1)  grad descent univariavel
+data2.y.python y (47x1)  grad descent multivariável
+
+Aula 1 - LINear Regression  v1.0.
+**********************************
+1a PARTE. Univariada.
+
+Matriz X: ans =
+
+   6.1101
+   5.5277
+   8.5186
+   7.0032
+   5.8598
+
+Matriz y: ans =
+
+   17.5920
+    9.1302
+   13.6620
+   11.8540
+    6.8233
+
+
+Plot dos dados originais.
+ => Visualizacao dos dados de X e y em data1.octave.
+
+Plotting green line: inicio da iteracao.
+ => Visualizacao da reta com semente Theta [0;0].
+
+Gradient Descent e Equacao Normal.
+==================================
+
+
+Custo inicial: 32.072734
+
+Theta encontrado pela sol. Eq. Normal : -3.895781 , 1.193034 
+Theta encontrado pelo gradient descent: -3.630291 , 1.166362 
+
+Plotting red line: resultado da iteracao
+ => Visualizacao da reta ajustada pelo Gradiente.
+
+Predicoes de lucro por cidade:
+Alfenas   (MG): 73722 hab., lucro previsto 49683.650797
+Amparo    (SP): 65836 hab., lucro previsto 40485.717303
+Andradina (SP): 55317 hab., lucro previsto 28216.751739
+ => Resultados para tres cidades. Observe Andradina.
+
+Grafico do custo versus iteracoes.
+ => Visualizacao da Curva de Convergencia.
+
+Plotting Surface: Custo em 3 dimensoes
+ => Visualizacao da Funcao de Custo.
+
+Plotting Contour: Curvas de mesmo custo em theta1 e theta2.
+ => Visualizacao da Curva de Contorno.
+
+
+Aula 1 - LINear Regression  v1.0.
+***********************************
+2a PARTE. Multivariada.
+
+Matriz X: ans =
+
+   2104      3
+   1600      3
+   2400      3
+   1416      2
+   3000      4
+
+Matriz y: ans =
+
+   399900
+   329900
+   369000
+   232000
+   539900
+
+Normalizando atributos das matrizes de entrada
+Matriz X: ans =
+
+   0.13001  -0.22368
+  -0.50419  -0.22368
+   0.50248  -0.22368
+  -0.73572  -1.53777
+   1.25748   1.09042
+
+Matriz y: ans =
+
+   0.475747
+  -0.084074
+   0.228626
+  -0.867025
+   1.595389
+
+
+Gradient Descent.
+=================
+
+Theta, coeficientes da hipotese: 
+ -0.000000 
+ 0.884766 
+ -0.053179 
+
+Predicoes de custo:
+Andradina (SP), 1800 m2 e 3 salas: R$313963.065443
+ => Resultado da predicao de custo para Andradina.
+
+Fim.
+octave:16> 
+octave:16> diary off
