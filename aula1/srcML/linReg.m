@@ -16,7 +16,7 @@ function theta = linReg(X, Y, theta_ini, num_alpha, delta, iterations)
 
   theta = theta_ini;
 
-  X_n = [ones(size(X)) X];
+  X_n = [ones(length(X),1) X];
 
   for i = 1:iterations
     theta = linRegStep(X_n, Y, theta, num_alpha, delta);
