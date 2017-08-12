@@ -3,10 +3,10 @@
 [X, Y] = data1();
 
 %% Estimação dos parâmetros
-theta = [10; 10];
+theta = [0; 0];
 num_alpha = 0.001;
-delta = 0.01;
-iterations = 10000;
+delta = 0.001;
+iterations = 100000;
 
 theta = linReg(X, Y, theta, num_alpha, delta, iterations);
 

@@ -18,7 +18,8 @@ function d_theta = partialPenalty(X, Y, theta, delta)
   theta_plus_delta = theta * ones(size(theta')) + eye(length(theta)) * delta;
 
   error_plus_theta = sum(((X * theta_plus_delta - ...
-                         Y * ones(size(theta'))).^2)/length(Y),1);
+                           Y * ones(size(theta'))).^2)/length(Y),1);
 
-  d_theta = (error_plus_theta' - ones(size(theta))*penalty(X, Y, theta)) * (1/delta);
+  d_theta = (error_plus_theta' - ones(size(theta))*penalty(X, Y, theta)) ...
+            * (1/delta);
 end

@@ -14,11 +14,21 @@ function theta = linReg(X, Y, theta_ini, num_alpha, delta, iterations)
   %                    gradient estimation
   % iterations **numeric**: the number of iterations of the algorithm
 
+  means_x = mean(X);
+
+  std_x = std(X);
+
   theta = theta_ini;
+
+  X = (X - ones(size(X)) * diag(mean(X))) * inv(diag(std(X)))
 
   X_n = [ones(length(X),1) X];
 
   for i = 1:iterations
     theta = linRegStep(X_n, Y, theta, num_alpha, delta);
   end
+
+  theta(2:end, 1) = inv(diag(std_x)) * theta(2:end, 1);
+  theta(1,1) = theta(1,1) - means_x * theta(2:end, 1);
+
 end
