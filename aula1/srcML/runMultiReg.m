@@ -6,9 +6,9 @@
 theta = [0; 0; 0];
 num_alpha = 0.001;
 delta = 0.001;
-iterations = 10000;
+iterations = 1000000;
 
-theta = linReg(X, Y, theta, num_alpha, delta, iterations)
+theta = linReg(X, Y, theta, num_alpha, delta, iterations);
 
 figure(1)
 scatter(X(:,1), Y)
